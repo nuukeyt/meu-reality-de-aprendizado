@@ -1,5 +1,4 @@
 * {
-    /* Aqui eu estou fazendo o 'RESET CSS' -- */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,4 +9,86 @@
     --secundary-color: #A9A9A9;
     --third-color: #FF5722;
     --text-color: #1C1C1C;
+    --header-height: 80px;
+}
+
+body {
+    background-color: var(--bg-primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.main-header {
+    height: var(--header-height);
+    background-color: var(--bg-primary-color);
+}
+
+/* REGRAS MOBILE (PADRÃO) */
+.menu-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%; 
+    padding: 0 15px; /* Reduz padding para mobile */
+}
+
+.logo-icon {
+    height: 85px;
+    width: auto;
+}
+
+/* Botão Hambúrguer */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Navegação: Escondida no Mobile */
+.nav-list {
+    display: none;
+}
+
+.contact-item {
+    background-color: var(--third-color);
+    padding: 8px 25px;
+    border-radius: 60px;
+}
+
+.contact-item a {
+    color: var(--bg-primary-color); 
+    font-weight: 600;
+}
+
+.nav-list a:not(.cta-link):hover {
+    color: var(--third-color); 
+}
+
+
+/* MEDIA QUERY: ACIMA DE 768px (DESKTOP) */
+@media (min-width: 768px) {
+    
+    .menu-nav {
+        padding: 0 30px; /* Restaura padding para desktop */
+    }
+
+    /* Esconde o botão Hambúrguer no Desktop */
+    .menu-toggle {
+        display: none;
+    }
+    
+    /* Mostra a lista de navegação no Desktop */
+    .nav-list {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        gap: 1.5rem;
+    }
 }
