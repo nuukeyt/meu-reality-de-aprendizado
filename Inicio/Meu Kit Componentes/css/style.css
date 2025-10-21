@@ -39,7 +39,7 @@ a {
 
 .logo-icon {
     height: 85px;
-    width: auto;
+    width: 120px;
 }
 
 /* Botão Hambúrguer */
@@ -90,5 +90,46 @@ a {
         list-style-type: none;
         align-items: center;
         gap: 1.5rem;
+    }
+
+    footer {
+        background-color: #F5F5F5;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+     .container-left {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+
+        
+     }
+    .container-mid {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .container-right {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        gap: 0.25rem;
+    }
+
+    .text-icon {
+        display: flex;
+        justify-items: center;
+        gap: 0.5rem;
+    }
+    .icon-midia {
+        width: 24px;
+        height: 24px;
     }
 }
