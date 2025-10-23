@@ -1,3 +1,5 @@
+/* BASE STYLES */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,6 +26,8 @@ a {
   font-family: var(--primary--font);
   transition: color 0.3s ease;
 }
+
+/* HEADER STYLES */
 
 .main-header {
   height: var(--header-height);
@@ -70,6 +74,7 @@ a {
   color: var(--third-color);
 }
 
+/* FOOTER STYLES */
 footer {
   background-color: #f5f5f5;
   display: flex;
@@ -116,6 +121,8 @@ footer {
   height: 24px;
 }
 
+
+/* HERO SECTION STYLES */
 .hero-section {
   position: relative;
   width: 100%;
@@ -177,6 +184,7 @@ footer {
 }
 
 /* MEDIA QUERY: ACIMA DE 768px (DESKTOP) */
+/* HEADER STYLES DESKTOP */
 @media (min-width: 768px) {
   .menu-nav {
     padding: 0 30px;
@@ -229,6 +237,8 @@ footer {
     line-height: 2.5rem;
     font-weight: 600;
   }
+
+  /* BUTTON STYLES MOBILE */
   .container-button {
     flex-flow: column nowrap !important;
     gap: 1.5rem;
@@ -255,6 +265,7 @@ footer {
     text-align: center;
   }
 
+  /* FOOTER STYLES MOBILE */
   footer {
     display: flex;
     justify-content: space-around;
@@ -275,6 +286,8 @@ footer {
     gap: 2rem;
   }
 }
+
+/* BUTTON SECTION STYLES */
 .button-section {
   display: flex;
   flex-flow: column nowrap;
@@ -391,7 +404,7 @@ footer {
 }
 
 .ghost-button:hover {
-  text-decoration: ;
+  text-decoration: underline;
   transform: scale(1.15);
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
