@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="css/navbar.css" />  <!-- Cabeçalho -->
     <link rel="stylesheet" href="css/hero.css" /> <!-- pagina principal (hero-section) -->
     <link rel="stylesheet" href="css/buttons.css" /> <!-- container com 3 tipos de botões -->
-    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/card.css"> <!--  3 cards horizontais com titulo e paragrafo -->
+    <link rel="stylesheet" href="css/form.css"> <!-- formulario -->
     <link rel="stylesheet" href="css/footer.css" /> <!-- Rodapé  -->
   </head>
 
@@ -137,9 +138,38 @@
                 <a href="#" class="ghost-button">Leia Mais</a>
                 </div>
         </article>
-        
- 
       </section>
+
+      <section class="form-section">
+        <h2 class="section-title">Entre em Contato</h2>
+    
+        <form class="contact-form" action="https://script.google.com/macros/s/AKfycbyNHwC_COYsRo17h5oERB5MY_yoWvfxi1OeWxyTAT0wS9avplTSorOw20oltk0g3MhUrQ/exec" method="POST">
+        
+          <div class="form-group half-width">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" required />
+          </div>
+        
+          <div class="form-group half-width">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required />
+          </div>
+        
+          <div class="form-group full-width">
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto da Mensagem" required />
+          </div>
+        
+          <div class="form-group full-width">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Sua Mensagem" required></textarea>
+          </div>
+        
+          <div class="form-group full-width submit-group">
+              <button type="submit" class="primary-button cta-form">Enviar Mensagem</button>
+          </div>
+        </form>
+    </section>
     </main>
 
     <footer>

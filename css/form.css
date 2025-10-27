@@ -1,0 +1,95 @@
+.form-section {
+    padding: 4rem 1rem;
+    background-color: var(--bg-primary-color);
+    text-align: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff; 
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 1.5rem;
+    padding: 0 10px; 
+}
+
+.half-width {
+    flex: 1 1 calc(50% - 20px); 
+    min-width: 300px;
+}
+
+
+.full-width {
+    flex: 1 1 100%;
+    padding: 0 10px;
+}
+
+label {
+    font-family: var(--primary--font);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    font-family: 'Lora', serif; 
+    padding: 12px;
+    border: 1px solid var(--secundary-color, #a9a9a9);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--third-color, #ff5722);
+    box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2); 
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.submit-group {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cta-form {
+    width: 100%;
+    max-width: 350px;
+    height: 3.5rem; 
+    margin-top: 0;
+}
+
+@media (max-width: 650px) {
+    .contact-form {
+        padding: 1rem;
+    }
+    
+    .form-group {
+        flex: 1 1 100%;
+        padding: 0 5px;
+    }
+    
+    .half-width {
+        min-width: 100%;
+    }
+}
