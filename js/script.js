@@ -1,3 +1,32 @@
+const menuToggle = document.querySelector('.menu-toggle');
+
+const navList = document.querySelector('.nav-list');
+
+const mainHeader = document.querySelector('.main-header');
+
+
+const toggleMenu = () => {
+    navList.classList.toggle('open');
+    
+    menuToggle.classList.toggle('open');
+    
+    mainHeader.classList.toggle('menu-open');
+    
+    document.body.classList.toggle('no-scroll');
+};
+
+menuToggle.addEventListener('click', toggleMenu);
+
+
+document.querySelectorAll('.nav-list a').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navList.classList.contains('open')) {
+            toggleMenu();
+        }
+    });
+});
+
+
 const SUPABASE_URL = 'https://sbiqaeavemybpezpfwzp.supabase.co'; 
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InNiaXFhZWF2ZW15YnBlenBmd3pwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE2MDY3ODUsImV4cCI6MjA3NzE4Mjc4NX0.JR0RxL0qXP5V0GSahV4nOoesxY2SElYwGO9M-krBKgU'; 
 const TABLE_NAME = 'contatos'; 
@@ -40,3 +69,4 @@ form.addEventListener('submit', async function(e) {
         submitButton.disabled = false;
     }
 });
+

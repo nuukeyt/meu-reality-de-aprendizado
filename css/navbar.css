@@ -1,11 +1,13 @@
 .main-header {
   height: var(--header-height);
   background-color: var(--bg-primary-color);
+  z-index: 20; 
+  position: relative; 
 }
 
 .menu-nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-around; 
   align-items: center;
   height: 100%;
   padding: 0 15px;
@@ -22,10 +24,12 @@
   font-size: 30px;
   cursor: pointer;
   color: var(--text-color);
+  display: none; 
+  z-index: 30;
 }
 
 .nav-list {
-  display: none;
+  display: none; 
 }
 
 .contact-item {
@@ -43,9 +47,67 @@
   color: var(--third-color);
 }
 
+/* --- ESTILOS DE OVERLAY PARA MOBILE (< 768px) --- */
+@media (max-width: 767px) {
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu-nav {
+        justify-content: space-between; 
+    }
+
+    .nav-list {
+        display: flex; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(255, 255, 255); 
+        z-index: 15;
+      
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;  
+        list-style-type: none;
+        padding: 0;
+        
+        transform: translateY(-100%);
+        transition: transform 0.4s ease-in-out; 
+    }
+    
+    .nav-list.open {
+        transform: translateY(0);
+    }
+
+    .item-list {
+        margin: 15px 0; 
+        font-size: 1.8rem; 
+    }
+
+    .nav-list a {
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+
+    .contact-item {
+        margin-top: 30px;
+        background-color: var(--third-color);
+    }
+
+    .contact-item a {
+        color: var(--bg-primary-color); 
+    }
+}
+
+
 @media (min-width: 768px) {
   .menu-nav {
     padding: 0 30px;
+    justify-content: space-between; 
   }
 
   .nav-list {
@@ -54,7 +116,12 @@
     align-items: center;
     gap: 1.5rem;
   }
+  
   .menu-toggle {
     display: none;
   }
+}
+
+.no-scroll {
+    overflow: hidden;
 }
